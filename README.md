@@ -29,7 +29,7 @@ Weblix/
 ├── index.html
 ├── style.css
 ├── images/
-│   └── hero-image.jpg
+│   └── favicon.ico
 └── README.md
 ```
 
@@ -42,7 +42,7 @@ The goal of this project is to provide a modern, responsive, and visually appeal
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/weblix.git
+git clone https://github.com/mohdrehxn/weblix.git
 ```
 
 2. Open the project folder.
