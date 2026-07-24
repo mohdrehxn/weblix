@@ -7,6 +7,426 @@
     <title>Weblix - Web Development Agency</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg-color: #f4f4f9;
+            --text-color: #222;
+            --text-muted: #555;
+            --nav-bg: #ffffff;
+            --nav-text: #333;
+            --nav-logo-color: #1a1a1a;
+            --nav-border: rgba(0, 0, 0, .08);
+            --section-bg: #ffffff;
+            --about-bg: #eceef3;
+            --card-bg: #ffffff;
+            --card-border: rgba(0, 173, 181, .25);
+            --accent: #00adb5;
+            --accent-2: #008891;
+        }
+
+        body.dark-theme {
+            --bg-color: #0d1117;
+            --text-color: #f4f4f9;
+            --text-muted: #d1d5db;
+            --nav-bg: #111827;
+            --nav-text: #ccc;
+            --nav-logo-color: #ffffff;
+            --nav-border: rgba(255, 255, 255, .08);
+            --section-bg: #111827;
+            --about-bg: #1a1a1a;
+            --card-bg: #1f2937;
+            --card-border: rgba(0, 173, 181, .3);
+            --accent: #00d9ff;
+            --accent-2: #00adb5;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--nav-bg);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--nav-border);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .nav-logo-text {
+            color: var(--nav-logo-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--nav-text);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        /* Theme toggle button (icon-based, sits inline in navbar) */
+        #theme-switch {
+            height: 40px;
+            width: 40px;
+            padding: 0;
+            border: 1px solid var(--accent);
+            border-radius: 50%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+            flex-shrink: 0;
+        }
+
+        #theme-switch:hover {
+            background-color: var(--accent);
+        }
+
+        #theme-switch svg {
+            fill: var(--nav-text);
+            transition: fill 0.3s ease;
+        }
+
+        #theme-switch:hover svg {
+            fill: #0d1117;
+        }
+
+        #theme-switch svg:last-child {
+            display: none;
+        }
+
+        body.dark-theme #theme-switch svg:first-child {
+            display: none;
+        }
+
+        body.dark-theme #theme-switch svg:last-child {
+            display: block;
+        }
+
+        /* Hero Section */
+        .main {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Dark Overlay */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right,
+                    rgba(2, 11, 45, .92),
+                    rgba(2, 11, 45, .75));
+            z-index: 1;
+        }
+
+        /* Text */
+        .text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+            width: 90%;
+            max-width: 700px;
+        }
+
+        .text-box h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .text-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #00CFFF, #1E90FF);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 207, 255, .35);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .text-box h2 {
+                font-size: 2.4rem;
+            }
+
+            .text-box p {
+                font-size: 1rem;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--about-bg);
+            padding: 60px 20px;
+            text-align: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .about-h2 {
+            color: var(--text-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services {
+            background: var(--section-bg);
+            padding: 80px 10%;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .services h2 {
+            font-size: 40px;
+            color: var(--text-color);
+            margin-bottom: 50px;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 15px;
+            transition: .3s;
+            border: 1px solid var(--card-border);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 173, 181, .3);
+        }
+
+        .service-card h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--about-bg);
+            padding: 80px 20px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact h2 {
+            color: var(--text-color);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact > p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .form-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--card-border);
+            border-radius: 4px;
+            font-size: 16px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--accent);
+            color: #0d1117;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-2);
+        }
+
+        .form-container .btn {
+            display: block;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background-color: var(--nav-bg);
+            padding: 1.5rem 10%;
+            border-top: 1px solid var(--nav-border);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--nav-text);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -19,10 +439,21 @@
 
         <ul class="nav-links">
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <button id="theme-switch" aria-label="Toggle dark and light theme">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px">
+                <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px">
+                <path
+                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
+        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -45,7 +476,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
 
         <h2 class="about-h2">About Weblix</h2>
 
@@ -88,6 +519,68 @@
 
     </section>
 
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+        <p>Have a project in mind? Let's talk!</p>
+
+        <div class="form-container">
+            <!-- Replace 'your-backend-endpoint' with your actual form processor URL -->
+            <form action="your-backend-endpoint" method="POST">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="How can we help?">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <a href="mailto:weblixdotio@gmail.com" class="btn">Get In Touch</a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Weblix. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </footer>
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        const savedTheme = localStorage.getItem('theme');
+
+        // Default to dark theme on first visit if nothing saved yet
+        const initialTheme = savedTheme || 'dark';
+        if (initialTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        themeSwitch.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+    </script>
 </body>
 
 </html>
