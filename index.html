@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Weblix is a Hyderabad-based web development agency crafting fast, responsive, and visually stunning websites for growing businesses.">
-    <meta name="keywords" content="web development, web design, UI/UX design, responsive websites, landing pages, Weblix, Hyderabad">
+    <meta name="description"
+        content="Weblix is a Hyderabad-based web development agency crafting fast, responsive, and visually stunning websites for growing businesses.">
+    <meta name="keywords"
+        content="web development, web design, UI/UX design, responsive websites, landing pages, Weblix, Hyderabad">
     <meta name="author" content="Weblix">
     <meta property="og:title" content="Weblix — Web Development Agency">
     <meta property="og:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1600">
-    <meta property="og:description" content="High-performance websites that help businesses grow, convert visitors into customers, and build a powerful online presence.">
+    <meta property="og:description"
+        content="High-performance websites that help businesses grow, convert visitors into customers, and build a powerful online presence.">
     <meta name="twitter:card" content="summary_large_image">
     <title>Weblix — Web Development Agency</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --ink: #0b0d12;
@@ -62,9 +67,15 @@
             --amber-soft: rgba(247, 185, 85, .14);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             background-color: var(--bg);
@@ -74,9 +85,14 @@
             overflow-x: hidden;
         }
 
-        img { max-width: 100%; display: block; }
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-        a { color: inherit; }
+        a {
+            color: inherit;
+        }
 
         .eyebrow {
             font-family: var(--mono);
@@ -108,18 +124,30 @@
             margin-bottom: 3.5rem;
         }
 
-        .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+        .section-head.center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: var(--display);
             font-weight: 600;
             letter-spacing: -.01em;
             line-height: 1.1;
         }
 
-        .section-head h2 { font-size: clamp(2rem, 3.4vw, 2.75rem); }
+        .section-head h2 {
+            font-size: clamp(2rem, 3.4vw, 2.75rem);
+        }
 
-        p { color: var(--text-muted); line-height: 1.75; }
+        p {
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
 
         .btn {
             display: inline-flex;
@@ -171,8 +199,15 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .reveal { opacity: 1; transform: none; transition: none; }
-            html { scroll-behavior: auto; }
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
         }
 
         /* ---------- Navbar ---------- */
@@ -226,7 +261,8 @@
         .nav-links a::after {
             content: "";
             position: absolute;
-            left: 0; bottom: -2px;
+            left: 0;
+            bottom: -2px;
             width: 0;
             height: 1.5px;
             background: var(--violet);
@@ -239,27 +275,52 @@
         }
 
         .nav-links a:hover::after,
-        .nav-links a.active::after { width: 100%; }
+        .nav-links a.active::after {
+            width: 100%;
+        }
 
-        .nav-right { display: flex; align-items: center; gap: 1rem; }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
         #theme-switch {
-            height: 40px; width: 40px; padding: 0;
+            height: 40px;
+            width: 40px;
+            padding: 0;
             border: 1px solid var(--border);
             border-radius: 50%;
             background: transparent;
-            display: flex; justify-content: center; align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
             transition: .3s;
             flex-shrink: 0;
         }
 
-        #theme-switch:hover { border-color: var(--violet); background: var(--violet-soft); }
+        #theme-switch:hover {
+            border-color: var(--violet);
+            background: var(--violet-soft);
+        }
 
-        #theme-switch svg { fill: var(--text); transition: fill .3s ease; }
-        #theme-switch svg:last-child { display: none; }
-        body.dark-theme #theme-switch svg:first-child { display: none; }
-        body.dark-theme #theme-switch svg:last-child { display: block; }
+        #theme-switch svg {
+            fill: var(--text);
+            transition: fill .3s ease;
+        }
+
+        #theme-switch svg:last-child {
+            display: none;
+        }
+
+        body.dark-theme #theme-switch svg:first-child {
+            display: none;
+        }
+
+        body.dark-theme #theme-switch svg:last-child {
+            display: block;
+        }
 
         .nav-toggle {
             display: none;
@@ -272,7 +333,8 @@
         }
 
         .nav-toggle span {
-            width: 22px; height: 2px;
+            width: 22px;
+            height: 2px;
             background: var(--text);
             border-radius: 2px;
             transition: transform .3s ease, opacity .3s ease;
@@ -284,8 +346,7 @@
             grid-template-columns: 1.1fr .9fr;
             gap: 3rem;
             align-items: center;
-            padding: 6.5rem 8% 6rem;
-            min-height: 88vh;
+            padding: 3.5rem 8% 4.5rem;
         }
 
         .hero-copy h1 {
@@ -293,7 +354,9 @@
             margin-bottom: 1.4rem;
         }
 
-        .hero-copy h1 .accent { color: var(--violet); }
+        .hero-copy h1 .accent {
+            color: var(--violet);
+        }
 
         .hero-copy p {
             font-size: 1.13rem;
@@ -301,7 +364,12 @@
             margin-bottom: 2.2rem;
         }
 
-        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
 
         .hero-stats {
             display: flex;
@@ -324,53 +392,35 @@
             color: var(--text-muted);
         }
 
-        /* Signature network diagram */
-        .hero-visual {
+        .hero-image {
             position: relative;
             aspect-ratio: 1 / 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .hero-visual svg { width: 100%; height: 100%; overflow: visible; }
-
-        .grid-line { stroke: var(--border); stroke-width: 1; }
-
-        .net-line {
-            stroke: var(--violet);
-            stroke-width: 1.4;
-            stroke-dasharray: 6 260;
-            opacity: .55;
-            animation: draw 7s linear infinite;
-        }
-
-        .net-line.n2 { stroke: var(--amber); animation-duration: 9s; animation-delay: -2s; }
-        .net-line.n3 { animation-duration: 11s; animation-delay: -5s; }
-        .net-line.n4 { stroke: var(--amber); animation-duration: 8s; animation-delay: -1s; }
-
-        @keyframes draw {
-            to { stroke-dashoffset: -520; }
-        }
-
-        .net-node {
-            fill: var(--violet);
-            animation: pulse 3.2s ease-in-out infinite;
-        }
-
-        .net-node.amber { fill: var(--amber); animation-delay: 1.1s; }
-        .net-node.n3 { animation-delay: .5s; }
-        .net-node.n4 { animation-delay: 1.8s; }
-        .net-node.n5 { animation-delay: 2.4s; }
-
-        @keyframes pulse {
-            0%, 100% { r: 4; opacity: .85; }
-            50% { r: 6.5; opacity: 1; }
+        .hero-image img {
+            width: 65%;
+            height: 65%;
+            object-fit: contain;
         }
 
         @media (max-width: 900px) {
-            .hero { grid-template-columns: 1fr; padding-top: 3.5rem; text-align: left; }
-            .hero-visual { max-width: 340px; margin: 0 auto; order: -1; }
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 2.5rem;
+                text-align: left;
+            }
+
+            .hero-logo {
+                max-width: 340px;
+                margin: 0 auto;
+                order: -1;
+            }
         }
 
         /* ---------- About ---------- */
@@ -387,7 +437,10 @@
             align-items: start;
         }
 
-        .about-grid p { font-size: 1.08rem; margin-bottom: 1.2rem; }
+        .about-grid p {
+            font-size: 1.08rem;
+            margin-bottom: 1.2rem;
+        }
 
         .about-stats {
             display: grid;
@@ -417,8 +470,13 @@
         }
 
         @media (max-width: 800px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .about-stats { grid-template-columns: 1fr 1fr; }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         /* ---------- Services ---------- */
@@ -439,20 +497,29 @@
         .service-card:hover {
             transform: translateY(-6px);
             border-color: var(--violet);
-            box-shadow: 0 20px 45px -20px rgba(0,0,0,.25);
+            box-shadow: 0 20px 45px -20px rgba(0, 0, 0, .25);
         }
 
         .service-icon {
-            width: 44px; height: 44px;
+            width: 44px;
+            height: 44px;
             border-radius: 10px;
             background: var(--violet-soft);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.3rem;
             margin-bottom: 1.2rem;
         }
 
-        .service-card h3 { font-size: 1.15rem; margin-bottom: .6rem; }
-        .service-card p { font-size: .95rem; }
+        .service-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: .6rem;
+        }
+
+        .service-card p {
+            font-size: .95rem;
+        }
 
         /* ---------- Portfolio ---------- */
         .portfolio-grid {
@@ -469,17 +536,33 @@
             transition: transform .4s var(--ease), box-shadow .4s var(--ease);
         }
 
-        .portfolio-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -22px rgba(0,0,0,.3); }
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px -22px rgba(0, 0, 0, .3);
+        }
 
-        .portfolio-media { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+        .portfolio-media {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
 
-        .portfolio-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+        .portfolio-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s var(--ease);
+        }
 
-        .portfolio-card:hover .portfolio-media img { transform: scale(1.06); }
+        .portfolio-card:hover .portfolio-media img {
+            transform: scale(1.06);
+        }
 
         .portfolio-tag {
-            position: absolute; top: 12px; left: 12px;
-            background: rgba(11,13,18,.72);
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(11, 13, 18, .72);
             color: #fff;
             font-family: var(--mono);
             font-size: .68rem;
@@ -489,9 +572,19 @@
             border-radius: 999px;
         }
 
-        .portfolio-body { padding: 1.4rem 1.5rem 1.6rem; }
-        .portfolio-body h3 { font-size: 1.08rem; margin-bottom: .35rem; }
-        .portfolio-body p { font-size: .9rem; margin-bottom: 0; }
+        .portfolio-body {
+            padding: 1.4rem 1.5rem 1.6rem;
+        }
+
+        .portfolio-body h3 {
+            font-size: 1.08rem;
+            margin-bottom: .35rem;
+        }
+
+        .portfolio-body p {
+            font-size: .9rem;
+            margin-bottom: 0;
+        }
 
         /* ---------- Team ---------- */
         .team-grid {
@@ -500,7 +593,9 @@
             gap: 1.8rem;
         }
 
-        .team-card { text-align: left; }
+        .team-card {
+            text-align: left;
+        }
 
         .team-photo {
             aspect-ratio: 1/1;
@@ -510,10 +605,23 @@
             border: 1px solid var(--border);
         }
 
-        .team-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(45%); transition: filter .4s ease; }
-        .team-card:hover .team-photo img { filter: grayscale(0%); }
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(45%);
+            transition: filter .4s ease;
+        }
 
-        .team-card h3 { font-size: 1.05rem; margin-bottom: .15rem; }
+        .team-card:hover .team-photo img {
+            filter: grayscale(0%);
+        }
+
+        .team-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: .15rem;
+        }
+
         .team-card .role {
             font-family: var(--mono);
             font-size: .75rem;
@@ -540,7 +648,9 @@
             transition: transform .35s var(--ease), border-color .3s ease;
         }
 
-        .price-card:hover { transform: translateY(-6px); }
+        .price-card:hover {
+            transform: translateY(-6px);
+        }
 
         .price-card.featured {
             border-color: var(--violet);
@@ -550,7 +660,9 @@
 
         .price-card.featured::before {
             content: "Most Popular";
-            position: absolute; top: -13px; left: 2.2rem;
+            position: absolute;
+            top: -13px;
+            left: 2.2rem;
             background: var(--violet);
             color: #fff;
             font-family: var(--mono);
@@ -561,8 +673,15 @@
             border-radius: 999px;
         }
 
-        .price-card h3 { font-size: 1.2rem; margin-bottom: .3rem; }
-        .price-card .plan-desc { font-size: .88rem; margin-bottom: 1.4rem; }
+        .price-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: .3rem;
+        }
+
+        .price-card .plan-desc {
+            font-size: .88rem;
+            margin-bottom: 1.4rem;
+        }
 
         .price-card .price {
             font-family: var(--display);
@@ -593,17 +712,23 @@
             gap: .6rem;
         }
 
-        .price-card ul li:first-child { border-top: none; }
+        .price-card ul li:first-child {
+            border-top: none;
+        }
 
         .price-card ul li::before {
             content: "";
-            width: 6px; height: 6px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background: var(--amber);
             flex-shrink: 0;
         }
 
-        .price-card .btn { justify-content: center; width: 100%; }
+        .price-card .btn {
+            justify-content: center;
+            width: 100%;
+        }
 
         /* ---------- Testimonials ---------- */
         .testimonial-strip {
@@ -626,14 +751,41 @@
             margin-bottom: 1.4rem;
         }
 
-        .testimonial-person { display: flex; align-items: center; gap: .8rem; }
-        .testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
-        .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .testimonial-person strong { display: block; font-size: .88rem; }
-        .testimonial-person span { font-family: var(--mono); font-size: .72rem; color: var(--text-muted); }
+        .testimonial-person {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+        }
+
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-person strong {
+            display: block;
+            font-size: .88rem;
+        }
+
+        .testimonial-person span {
+            font-family: var(--mono);
+            font-size: .72rem;
+            color: var(--text-muted);
+        }
 
         /* ---------- FAQ ---------- */
-        .faq-list { max-width: 760px; }
+        .faq-list {
+            max-width: 760px;
+        }
 
         .faq-item {
             border-bottom: 1px solid var(--border);
@@ -658,10 +810,13 @@
 
         .faq-question .icon {
             flex-shrink: 0;
-            width: 22px; height: 22px;
+            width: 22px;
+            height: 22px;
             border: 1px solid var(--border);
             border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-family: var(--mono);
             font-size: 1rem;
             transition: transform .35s var(--ease), border-color .3s ease, color .3s ease;
@@ -679,7 +834,11 @@
             transition: max-height .4s var(--ease);
         }
 
-        .faq-answer p { padding-bottom: 1.6rem; font-size: .95rem; max-width: 620px; }
+        .faq-answer p {
+            padding-bottom: 1.6rem;
+            font-size: .95rem;
+            max-width: 620px;
+        }
 
         /* ---------- Contact ---------- */
         .contact-section {
@@ -701,16 +860,27 @@
         }
 
         .contact-info .info-icon {
-            width: 38px; height: 38px;
+            width: 38px;
+            height: 38px;
             border-radius: 10px;
             background: var(--violet-soft);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex-shrink: 0;
             font-size: 1rem;
         }
 
-        .contact-info .info-row strong { display: block; font-size: .92rem; color: var(--text); }
-        .contact-info .info-row span { font-size: .88rem; color: var(--text-muted); }
+        .contact-info .info-row strong {
+            display: block;
+            font-size: .92rem;
+            color: var(--text);
+        }
+
+        .contact-info .info-row span {
+            font-size: .88rem;
+            color: var(--text-muted);
+        }
 
         .form-container {
             background: var(--bg);
@@ -719,9 +889,15 @@
             border-radius: var(--radius);
         }
 
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
 
-        .form-group { margin-bottom: 1.3rem; }
+        .form-group {
+            margin-bottom: 1.3rem;
+        }
 
         .form-group label {
             display: block;
@@ -745,7 +921,9 @@
         }
 
         .form-group input::placeholder,
-        .form-group textarea::placeholder { color: var(--text-muted); }
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
 
         .form-group input:focus,
         .form-group textarea:focus {
@@ -754,7 +932,9 @@
             box-shadow: 0 0 0 4px var(--violet-soft);
         }
 
-        textarea { resize: vertical; }
+        textarea {
+            resize: vertical;
+        }
 
         .submit-btn {
             width: 100%;
@@ -769,11 +949,35 @@
             transition: transform .3s var(--ease), box-shadow .3s var(--ease);
         }
 
-        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -10px var(--violet-soft); }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px -10px var(--violet-soft);
+        }
+
+        .form-status {
+            margin-top: 1rem;
+            font-size: .88rem;
+            display: none;
+        }
+
+        .form-status.success {
+            color: #2f9e58;
+            display: block;
+        }
+
+        .form-status.error {
+            color: #d64545;
+            display: block;
+        }
 
         @media (max-width: 800px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .form-row { grid-template-columns: 1fr; }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ---------- CTA band ---------- */
@@ -790,10 +994,26 @@
             flex-wrap: wrap;
         }
 
-        .cta-band h2 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); max-width: 480px; }
-        .cta-band p { color: rgba(255,255,255,.8); margin-top: .6rem; max-width: 420px; }
-        .cta-band .btn-primary { background: #fff; color: var(--violet); }
-        .cta-band .btn-primary:hover { box-shadow: 0 14px 30px -10px rgba(0,0,0,.35); }
+        .cta-band h2 {
+            color: #fff;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            max-width: 480px;
+        }
+
+        .cta-band p {
+            color: rgba(255, 255, 255, .8);
+            margin-top: .6rem;
+            max-width: 420px;
+        }
+
+        .cta-band .btn-primary {
+            background: #fff;
+            color: var(--violet);
+        }
+
+        .cta-band .btn-primary:hover {
+            box-shadow: 0 14px 30px -10px rgba(0, 0, 0, .35);
+        }
 
         /* ---------- Footer ---------- */
         .footer {
@@ -809,7 +1029,11 @@
             margin-bottom: 3rem;
         }
 
-        .footer-brand p { font-size: .9rem; max-width: 280px; margin-top: 1rem; }
+        .footer-brand p {
+            font-size: .9rem;
+            max-width: 280px;
+            margin-top: 1rem;
+        }
 
         .footer-col h4 {
             font-family: var(--mono);
@@ -820,9 +1044,23 @@
             color: var(--text);
         }
 
-        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
-        .footer-col ul a { text-decoration: none; font-size: .9rem; color: var(--text-muted); transition: color .25s ease; }
-        .footer-col ul a:hover { color: var(--violet); }
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+        }
+
+        .footer-col ul a {
+            text-decoration: none;
+            font-size: .9rem;
+            color: var(--text-muted);
+            transition: color .25s ease;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--violet);
+        }
 
         .footer-bottom {
             padding-top: 1.8rem;
@@ -834,30 +1072,61 @@
             gap: 1rem;
         }
 
-        .footer-bottom p { font-size: .82rem; margin: 0; }
+        .footer-bottom p {
+            font-size: .82rem;
+            margin: 0;
+        }
 
-        .footer-socials { display: flex; gap: .9rem; }
+        .footer-socials {
+            display: flex;
+            gap: .9rem;
+        }
+
         .footer-socials a {
-            width: 34px; height: 34px;
+            width: 34px;
+            height: 34px;
             border: 1px solid var(--border);
             border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
             font-size: .85rem;
             transition: border-color .25s ease, color .25s ease, transform .25s ease;
         }
-        .footer-socials a:hover { border-color: var(--violet); color: var(--violet); transform: translateY(-2px); }
+
+        .footer-socials a:hover {
+            border-color: var(--violet);
+            color: var(--violet);
+            transform: translateY(-2px);
+        }
 
         @media (max-width: 900px) {
-            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .footer-socials img {
+            width: 16px;
+            height: 16px;
+        }
+
+        body.dark-theme .footer-socials img {
+            filter: invert(1);
         }
 
         /* ---------- Responsive nav ---------- */
         @media (max-width: 860px) {
-            .nav-toggle { display: flex; }
+            .nav-toggle {
+                display: flex;
+            }
+
             .nav-links {
                 position: fixed;
-                top: 68px; left: 0; right: 0;
+                top: 68px;
+                left: 0;
+                right: 0;
                 flex-direction: column;
                 background: var(--bg);
                 border-bottom: 1px solid var(--border);
@@ -868,14 +1137,33 @@
                 transition: transform .4s var(--ease), opacity .3s ease;
                 z-index: 999;
             }
-            .nav-links.open { transform: translateY(0); opacity: 1; }
-            .section { padding: 4.5rem 6%; }
-            .cta-band { margin: 0 6%; flex-direction: column; align-items: flex-start; text-align: left; }
+
+            .nav-links.open {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .section {
+                padding: 4.5rem 6%;
+            }
+
+            .cta-band {
+                margin: 0 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
         }
 
         @media (max-width: 520px) {
-            .hero-actions { flex-direction: column; align-items: stretch; }
-            .hero-actions .btn { justify-content: center; }
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-actions .btn {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -884,7 +1172,7 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <a href="#home" class="nav-logo-text"><span class="dot"></span>Weblix</a>
+        <a href="#home" class="nav-logo-text"></span>Weblix</a>
 
         <ul class="nav-links" id="navLinks">
             <li><a href="#home" class="active">Home</a></li>
@@ -900,10 +1188,12 @@
         <div class="nav-right">
             <button id="theme-switch" aria-label="Toggle dark and light theme">
                 <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px">
-                    <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+                    <path
+                        d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px">
-                    <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+                    <path
+                        d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
                 </svg>
             </button>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -917,7 +1207,8 @@
         <div class="hero-copy">
             <p class="eyebrow">Web Development Agency · Hyderabad</p>
             <h1>Websites built to <span class="accent">convert</span>, not just look good.</h1>
-            <p>Weblix designs and develops fast, responsive, and visually distinctive websites that turn visitors into customers — with clean code and a design system built for growth.</p>
+            <p>Weblix designs and develops fast, responsive, and visually distinctive websites that turn visitors into
+                customers — with clean code and a design system built for growth.</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn btn-primary">Start Your Project →</a>
                 <a href="#portfolio" class="btn btn-ghost">View Our Work</a>
@@ -929,29 +1220,7 @@
             </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-            <svg viewBox="0 0 400 400">
-                <line class="grid-line" x1="0" y1="80" x2="400" y2="80" />
-                <line class="grid-line" x1="0" y1="200" x2="400" y2="200" />
-                <line class="grid-line" x1="0" y1="320" x2="400" y2="320" />
-                <line class="grid-line" x1="80" y1="0" x2="80" y2="400" />
-                <line class="grid-line" x1="200" y1="0" x2="200" y2="400" />
-                <line class="grid-line" x1="320" y1="0" x2="320" y2="400" />
-
-                <line class="net-line n1" x1="80" y1="80" x2="200" y2="200" />
-                <line class="net-line n2" x1="200" y1="200" x2="320" y2="80" />
-                <line class="net-line n3" x1="200" y1="200" x2="80" y2="320" />
-                <line class="net-line n4" x1="200" y1="200" x2="320" y2="320" />
-                <line class="net-line n3" x1="80" y1="80" x2="80" y2="320" />
-                <line class="net-line n2" x1="320" y1="80" x2="320" y2="320" />
-
-                <circle class="net-node" cx="200" cy="200" r="6" />
-                <circle class="net-node amber" cx="80" cy="80" r="4" />
-                <circle class="net-node n3" cx="320" cy="80" r="4" />
-                <circle class="net-node n4" cx="80" cy="320" r="4" />
-                <circle class="net-node n5 amber" cx="320" cy="320" r="4" />
-            </svg>
-        </div>
+            <img class="hero-logo" src="images/Weblix Transparent Logo.png" alt="Weblix Logo">
     </section>
 
     <!-- About -->
@@ -962,8 +1231,11 @@
                 <h2>A small studio, obsessed with the details that make sites feel fast.</h2>
             </div>
             <div class="reveal">
-                <p>Weblix is a Hyderabad-based web development studio focused on building fast, responsive, and visually distinctive websites for growing businesses. We combine clean engineering with deliberate design — no bloated templates, no unnecessary plugins.</p>
-                <p>Every project starts with your business goals, not a theme. From first sketch to final deploy, we stay hands-on so what ships matches what was promised.</p>
+                <p>Weblix is a Hyderabad-based web development studio focused on building fast, responsive, and visually
+                    distinctive websites for growing businesses. We combine clean engineering with deliberate design —
+                    no bloated templates, no unnecessary plugins.</p>
+                <p>Every project starts with your business goals, not a theme. From first sketch to final deploy, we
+                    stay hands-on so what ships matches what was promised.</p>
                 <div class="about-stats">
                     <div class="stat-card"><strong>4+</strong><span>Years Building</span></div>
                     <div class="stat-card"><strong>40+</strong><span>Happy Clients</span></div>
@@ -1015,7 +1287,8 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="section" id="portfolio" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <section class="section" id="portfolio"
+        style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
         <div class="section-head center reveal">
             <p class="eyebrow">Selected Work</p>
             <h2>Recent projects</h2>
@@ -1025,7 +1298,8 @@
             <div class="portfolio-card reveal">
                 <div class="portfolio-media">
                     <span class="portfolio-tag">E-commerce</span>
-                    <img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800" alt="E-commerce storefront project" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800"
+                        alt="E-commerce storefront project" loading="lazy">
                 </div>
                 <div class="portfolio-body">
                     <h3>Storefront Redesign</h3>
@@ -1035,7 +1309,8 @@
             <div class="portfolio-card reveal">
                 <div class="portfolio-media">
                     <span class="portfolio-tag">Creative Studio</span>
-                    <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?w=800" alt="Creative studio website project" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?w=800"
+                        alt="Creative studio website project" loading="lazy">
                 </div>
                 <div class="portfolio-body">
                     <h3>Studio Portfolio Site</h3>
@@ -1045,7 +1320,8 @@
             <div class="portfolio-card reveal">
                 <div class="portfolio-media">
                     <span class="portfolio-tag">SaaS</span>
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="SaaS landing page project" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
+                        alt="SaaS landing page project" loading="lazy">
                 </div>
                 <div class="portfolio-body">
                     <h3>SaaS Landing Page</h3>
@@ -1055,7 +1331,8 @@
             <div class="portfolio-card reveal">
                 <div class="portfolio-media">
                     <span class="portfolio-tag">Hospitality</span>
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Restaurant website project" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800"
+                        alt="Restaurant website project" loading="lazy">
                 </div>
                 <div class="portfolio-body">
                     <h3>Restaurant &amp; Booking Site</h3>
@@ -1072,32 +1349,21 @@
             <h2>Meet the team</h2>
         </div>
 
-        <div class="team-grid">
+        <div class="team-grid" style="max-width: 340px; margin: 0 auto;">
             <div class="team-card reveal">
-                <div class="team-photo"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500" alt="Team member portrait" loading="lazy"></div>
-                <h3>Arjun Rao</h3>
+                <div class="team-photo">
+                    <img src="images/mohd-rehan.jpg"
+                        alt="Mohd Rehan — Founder &amp; Lead Developer" loading="lazy">
+                </div>
+                <h3>Mohd Rehan</h3>
                 <p class="role">Founder &amp; Lead Developer</p>
-            </div>
-            <div class="team-card reveal">
-                <div class="team-photo"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500" alt="Team member portrait" loading="lazy"></div>
-                <h3>Meera Iyer</h3>
-                <p class="role">UI/UX Designer</p>
-            </div>
-            <div class="team-card reveal">
-                <div class="team-photo"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=500" alt="Team member portrait" loading="lazy"></div>
-                <h3>Kiran Desai</h3>
-                <p class="role">Frontend Engineer</p>
-            </div>
-            <div class="team-card reveal">
-                <div class="team-photo"><img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?w=500" alt="Team member portrait" loading="lazy"></div>
-                <h3>Sana Sheikh</h3>
-                <p class="role">Project Manager</p>
             </div>
         </div>
     </section>
 
     <!-- Pricing -->
-    <section class="section" id="pricing" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <section class="section" id="pricing"
+        style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
         <div class="section-head center reveal">
             <p class="eyebrow">Pricing</p>
             <h2>Plans that scale with you</h2>
@@ -1156,23 +1422,32 @@
 
         <div class="testimonial-strip">
             <div class="testimonial-card reveal">
-                <p class="quote">Weblix rebuilt our site in under a month and our lead form submissions nearly doubled. Communication was clear the whole way through.</p>
+                <p class="quote">Weblix rebuilt our site in under a month and our lead form submissions nearly doubled.
+                    Communication was clear the whole way through.</p>
                 <div class="testimonial-person">
-                    <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200" alt="Client portrait" loading="lazy"></div>
+                    <div class="testimonial-avatar"><img
+                            src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200"
+                            alt="Client portrait" loading="lazy"></div>
                     <div><strong>Rohan Malhotra</strong><span>Founder, Northline Retail</span></div>
                 </div>
             </div>
             <div class="testimonial-card reveal">
-                <p class="quote">The design felt custom to our brand from day one, not a reskinned template. Load times improved dramatically too.</p>
+                <p class="quote">The design felt custom to our brand from day one, not a reskinned template. Load times
+                    improved dramatically too.</p>
                 <div class="testimonial-person">
-                    <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="Client portrait" loading="lazy"></div>
+                    <div class="testimonial-avatar"><img
+                            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="Client portrait"
+                            loading="lazy"></div>
                     <div><strong>Priya Nair</strong><span>Marketing Lead, Studio Aara</span></div>
                 </div>
             </div>
             <div class="testimonial-card reveal">
-                <p class="quote">Responsive, precise, and genuinely invested in getting the details right. Our new site finally matches the quality of our product.</p>
+                <p class="quote">Responsive, precise, and genuinely invested in getting the details right. Our new site
+                    finally matches the quality of our product.</p>
                 <div class="testimonial-person">
-                    <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Client portrait" loading="lazy"></div>
+                    <div class="testimonial-avatar"><img
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200"
+                            alt="Client portrait" loading="lazy"></div>
                     <div><strong>Vikram Sethi</strong><span>CEO, Fernhill Foods</span></div>
                 </div>
             </div>
@@ -1189,23 +1464,39 @@
         <div class="faq-list">
             <div class="faq-item reveal">
                 <button class="faq-question">How long does a typical project take? <span class="icon">+</span></button>
-                <div class="faq-answer"><p>Most business websites take 2–4 weeks from kickoff to launch, depending on scope. Custom web apps and larger builds are scoped individually after a discovery call.</p></div>
+                <div class="faq-answer">
+                    <p>Most business websites take 2–4 weeks from kickoff to launch, depending on scope. Custom web apps
+                        and larger builds are scoped individually after a discovery call.</p>
+                </div>
             </div>
             <div class="faq-item reveal">
                 <button class="faq-question">Do you offer support after launch? <span class="icon">+</span></button>
-                <div class="faq-answer"><p>Yes — every project includes a post-launch check-in period, and ongoing maintenance plans are available for updates, monitoring, and content changes.</p></div>
+                <div class="faq-answer">
+                    <p>Yes — every project includes a post-launch check-in period, and ongoing maintenance plans are
+                        available for updates, monitoring, and content changes.</p>
+                </div>
             </div>
             <div class="faq-item reveal">
-                <button class="faq-question">Can you work with our existing brand guidelines? <span class="icon">+</span></button>
-                <div class="faq-answer"><p>Absolutely. We can design within an existing brand system, or help build one out if you don't have detailed guidelines yet.</p></div>
+                <button class="faq-question">Can you work with our existing brand guidelines? <span
+                        class="icon">+</span></button>
+                <div class="faq-answer">
+                    <p>Absolutely. We can design within an existing brand system, or help build one out if you don't
+                        have detailed guidelines yet.</p>
+                </div>
             </div>
             <div class="faq-item reveal">
                 <button class="faq-question">What platforms do you build on? <span class="icon">+</span></button>
-                <div class="faq-answer"><p>We build hand-coded sites for performance-critical projects and use CMS platforms like WordPress or Webflow when ongoing content editing is a priority.</p></div>
+                <div class="faq-answer">
+                    <p>We build hand-coded sites for performance-critical projects and use CMS platforms like WordPress
+                        or Webflow when ongoing content editing is a priority.</p>
+                </div>
             </div>
             <div class="faq-item reveal">
                 <button class="faq-question">How do payments work? <span class="icon">+</span></button>
-                <div class="faq-answer"><p>Projects are typically split into a deposit to begin work, a milestone payment, and a final payment on delivery. Exact terms are confirmed in your proposal.</p></div>
+                <div class="faq-answer">
+                    <p>Projects are typically split into a deposit to begin work, a milestone payment, and a final
+                        payment on delivery. Exact terms are confirmed in your proposal.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1243,8 +1534,8 @@
             </div>
 
             <div class="form-container reveal">
-                <!-- Replace 'your-backend-endpoint' with your actual form processor URL -->
-                <form action="your-backend-endpoint" method="POST">
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -1263,10 +1554,12 @@
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..."
+                            required></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">Send Message</button>
+                    <p class="form-status" id="formStatus"></p>
                 </form>
             </div>
         </div>
@@ -1277,7 +1570,8 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="#home" class="nav-logo-text"><span class="dot"></span>Weblix</a>
-                <p>A Hyderabad-based web development studio building fast, distinctive websites for growing businesses.</p>
+                <p>A Hyderabad-based web development studio building fast, distinctive websites for growing businesses.
+                </p>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
@@ -1309,9 +1603,19 @@
         <div class="footer-bottom">
             <p>&copy; 2026 Weblix. All rights reserved.</p>
             <div class="footer-socials">
-                <a href="#" aria-label="LinkedIn">in</a>
-                <a href="#" aria-label="Twitter">𝕏</a>
-                <a href="#" aria-label="Instagram">ig</a>
+                <a href="https://www.instagram.com/weblixdotio" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram"
+                        width="16" height="16">
+                </a>
+
+                <a href="https://www.facebook.com/share/19gA45Wxgx/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook"
+                        width="16" height="16">
+                </a>
+
+
             </div>
         </div>
     </footer>
@@ -1378,6 +1682,41 @@
                 item.classList.toggle('open');
                 answer.style.maxHeight = isOpen ? null : answer.scrollHeight + 'px';
             });
+        });
+
+        // Contact form submit (AJAX via Web3Forms so the page never navigates away)
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            formStatus.className = 'form-status';
+            formStatus.textContent = '';
+
+            try {
+                const formData = new FormData(contactForm);
+                const res = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                const result = await res.json();
+                if (result.success) {
+                    formStatus.textContent = "Thanks — we'll get back to you within one business day.";
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    throw new Error(result.message || 'Submission failed');
+                }
+            } catch (err) {
+                formStatus.textContent = 'Something went wrong. Please email us directly at weblixdotio@gmail.com.';
+                formStatus.className = 'form-status error';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
         });
     </script>
 </body>
