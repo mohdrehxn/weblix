@@ -45,9 +45,9 @@ The goal of this project is to provide a modern, responsive, and visually appeal
 git clone https://github.com/mohdrehxn/weblix.git
 ```
 
-2. Open the project folder.
+2.Open the project folder.
 
-3. Launch `index.html` in your browser.
+2.Launch `index.html` in your browser.
 
 No additional setup or installation is required.
 
